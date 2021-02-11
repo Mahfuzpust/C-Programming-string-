@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    char A[100];
+    int i,len=0,j,temp;
+    gets(A);
+    for(i=0;A[i]!='\0';i++)
+    {
+        len++;
+    }
+    printf("%d",len);
+    printf("\n");
+
+    for(i=0;i<len;i++)
+    {
+        for(j=i+1;j<len;j++)
+        {
+            if(A[i]>A[j])
+            {
+                temp=A[i];
+                A[i]=A[j];
+                A[j]=temp;
+            }
+        }
+    }
+    printf("%s",A);
+
+}
